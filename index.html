@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,29 +6,157 @@
   <title>Anthony Chiu</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: white;
-      color: black;
+      background-color: #10151e;
+      color: #f4f5f7;
+    }
+
+    header {
+      background-color: #151c27;
+      border-bottom: 1px solid #303847;
+      padding: 22px 0;
     }
 
     .container {
-      max-width: 900px;
-      margin: 80px auto;
-      padding: 0 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    a {
+      color: #a4acb9;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: white;
+    }
+
+    .hero {
+      padding: 100px 0 70px;
     }
 
     h1 {
-      font-size: 36px;
-      font-weight: 600;
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: #a4acb9;
+      line-height: 1.6;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 100px;
+    }
+
+    .card {
+      background-color: #1d2532;
+      border: 1px solid #303847;
+      border-radius: 12px;
+      padding: 25px;
+      min-height: 160px;
+    }
+
+    .card h2 {
+      font-size: 20px;
+      margin-top: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      border-top: 1px solid #303847;
+      color: #a4acb9;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+      }
+
+      .hero {
+        padding: 65px 0 45px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Anthony Chiu</h1>
-  </div>
+
+  <header>
+    <nav class="container">
+      <div class="logo">Anthony Chiu</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Hi, I'm Anthony Chiu.</h1>
+      <p>Welcome to my personal website.</p>
+    </section>
+
+    <div class="cards">
+      <section class="card" id="about">
+        <h2>About Me</h2>
+        <p>A little about myself.</p>
+      </section>
+
+      <section class="card" id="projects">
+        <h2>Projects</h2>
+        <p>Things I've worked on.</p>
+      </section>
+
+      <section class="card" id="contact">
+        <h2>Contact</h2>
+        <p>Get in touch with me.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 Anthony Chiu
+  </footer>
+
 </body>
 </html>
